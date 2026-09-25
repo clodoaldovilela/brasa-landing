@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./index.css";
 
 const WHATSAPP_URL =
   "https://wa.me/5511991542711?text=Ol%C3%A1%21%20Vim%20pelo%20Instagram%2FWhatsApp%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20churrasqueiro%20a%20domic%C3%ADlio.";
@@ -24,6 +23,8 @@ function App() {
 
           <button
             className="menu-button"
+            aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuAberto}
             onClick={() => setMenuAberto(!menuAberto)}
           >
             {menuAberto ? "✕" : "☰"}
@@ -44,7 +45,7 @@ function App() {
             </a>
           </nav>
 
-          <a className="btn btn-primary header-cta" href={WHATSAPP_URL} target="_blank">
+          <a className="btn btn-primary header-cta" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             Chamar no WhatsApp
           </a>
         </div>
@@ -69,11 +70,11 @@ function App() {
               </p>
 
               <div className="hero-actions">
-                <a className="btn btn-primary" href={WHATSAPP_URL} target="_blank">
+                <a className="btn btn-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   💬 Fazer orçamento
                 </a>
 
-                <a className="btn btn-secondary" href={INSTAGRAM_URL} target="_blank">
+                <a className="btn btn-secondary" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
                   📷 Ver Instagram
                 </a>
               </div>
@@ -117,8 +118,8 @@ function App() {
               <span>Serviços</span>
               <h2>Você recebe os convidados. A gente cuida do churrasco.</h2>
               <p>
-                Ideal para divulgar no WhatsApp, Instagram e apresentar o serviço
-                de forma simples, bonita e direta.
+                Do preparo da brasa ao serviço dos convidados, cuidamos de cada
+                etapa para o seu evento sair do jeito que você imaginou.
               </p>
             </div>
 
@@ -256,10 +257,10 @@ function App() {
             </p>
 
             <div className="hero-actions center">
-              <a className="btn btn-white" href={WHATSAPP_URL} target="_blank">
+              <a className="btn btn-white" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 💬 Chamar no WhatsApp
               </a>
-              <a className="btn btn-white" href={INSTAGRAM_URL} target="_blank">
+              <a className="btn btn-white" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
                 📷 Seguir no Instagram
               </a>
             </div>
@@ -275,13 +276,13 @@ function App() {
           </div>
 
           <div className="footer-links">
-            <a href={SITE_URL} target="_blank">Site oficial</a>
-            <a href={INSTAGRAM_URL} target="_blank">@brasaemkaza</a>
+            <a href={SITE_URL} target="_blank" rel="noopener noreferrer">Site oficial</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@brasaemkaza</a>
           </div>
         </div>
       </footer>
 
-      <a className="floating-whatsapp" href={WHATSAPP_URL} target="_blank">
+      <a className="floating-whatsapp" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
         💬 WhatsApp
       </a>
     </div>
